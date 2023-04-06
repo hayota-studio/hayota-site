@@ -1,0 +1,33 @@
+@use 'sass:map';
+
+@import '../../../../styles/variables.scss';
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 200px;
+
+    .button {
+        font-size: 36px;
+        text-decoration: none;
+        color: #000000;
+
+        &:hover {
+            cursor: url('https://i.imgur.com/RmWj5D8.png')29 29, auto;
+        }
+
+    }
+
+
+}
+
+
+
+@media (max-width: map.get($sizes, main-mobile-width)) {
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 88px 0;
+    }
+
+}

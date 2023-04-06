@@ -1,0 +1,56 @@
+@use 'sass:map';
+
+@import '../../../styles/variables.scss';
+
+.container {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    place-content: center;
+    justify-items: center;
+
+    cursor: url('https://i.imgur.com/mGmmKd8.png')29 29, auto;
+
+    .logo {
+        margin-bottom: 100px;
+        width: 622px;
+    }
+
+
+}
+
+.hayotaLady {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    cursor: url('https://i.imgur.com/RmWj5D8.png')29 29, auto;
+
+
+
+}
+
+
+@media (max-width: map.get($sizes, main-mobile-width)) {
+    .container {
+        max-width: map.get($sizes, main-mobile-width);
+        display: flex;
+        flex-direction: column;
+        place-content: normal;
+        align-items: center;
+
+
+        .logo {
+            margin: 64px 0 64px 0;
+            width: 290px;
+
+        }
+    }
+
+
+    .hayotaLady {
+        display: none;
+    }
+
+}

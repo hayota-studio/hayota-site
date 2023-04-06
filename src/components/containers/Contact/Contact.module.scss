@@ -1,0 +1,144 @@
+@use 'sass:map';
+
+@import '../../../styles/variables.scss';
+
+.container {
+    cursor: url('https://i.imgur.com/mGmmKd8.png')29 29, auto;
+
+    background-color: #ffffff;
+    height: 100vh;
+    overflow-y: auto;
+
+    .hayotaLady {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        cursor: url('https://i.imgur.com/RmWj5D8.png')29 29, auto;
+
+    }
+
+    .mainTitle {
+        color: #000000;
+        margin-block-start: 164px;
+        margin-inline-start: 164px;
+        font-size: 36px;
+        font-weight: 400;
+
+    }
+
+    .infoContainer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 128px;
+        margin-bottom: 178px;
+
+
+        & h1 {
+            font-size: 96px;
+            text-align: center;
+            margin-bottom: 64px;
+            color: #FF3131;
+            font-weight: 400;
+
+        }
+
+        .emailContainer {
+
+
+            p {
+                font-size: 32px;
+                text-align: center;
+
+            }
+
+            a {
+                color: #000000;
+                font-size: 96px;
+                text-align: center;
+                display: block;
+                text-decoration-line: underline;
+                cursor: url('https://i.imgur.com/RmWj5D8.png')29 29, auto;
+
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 64px;
+            }
+        }
+
+    }
+
+
+
+
+
+
+}
+
+
+
+
+
+@media (max-width: map.get($sizes, main-mobile-width)) {
+    .container {
+        max-width: map.get($sizes, main-mobile-width);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .hayotaLady {
+            position: static;
+            margin-block-start: 42px;
+
+        }
+
+
+        .mainTitle {
+            margin-block-start: 64px;
+            margin-inline-start: 0;
+            font-size: 36px;
+
+        }
+
+        .infoContainer {
+            display: flex;
+            flex-direction: column;
+            margin-top: 64px;
+            width: 346px;
+
+
+
+            & h1 {
+                font-size: 72px;
+                text-align: center;
+                margin-bottom: 64px;
+            }
+
+            .emailContainer {
+                p {
+                    font-size: 32px;
+                    text-align: center;
+
+                }
+
+                a {
+                    font-size: 32px;
+
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 64px;
+                }
+            }
+
+        }
+
+
+    }
+
+
+
+
+
+}
